@@ -1,3 +1,9 @@
+'''
+Description: Plot timeline from dataset
+
+Author: Zhaoyang
+'''
+
 import csv
 from pyecharts.charts import Line
 from pyecharts import options as opts
