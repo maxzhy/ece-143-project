@@ -17,6 +17,8 @@ Kept following columns:
 8. ID: unique identification
 9. EV Connector Types: connector type
 10. Facility Type: surrounding facilities
+
+@Author: Zhaoyang
 '''
 
 import csv
