@@ -1,5 +1,7 @@
 '''
 Generate EV charger heatmap in CA
+
+Author: Zhaoyang
 '''
 import folium
 import webbrowser
