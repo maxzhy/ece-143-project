@@ -24,7 +24,7 @@ Kept following columns:
 import csv
 
 test_csv_file = './web_dataset/new_fuel_stations.csv'
-out_csv_file = './new_data_cleaned.csv'
+out_csv_file = './output_dataset/new_data_cleaned.csv'
 
 access_allow = ['Public', 
                 'Public - Card key at all times', 
