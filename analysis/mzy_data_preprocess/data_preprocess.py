@@ -18,7 +18,7 @@ Kept following columns:
 9. EV Connector Types: connector type
 10. Facility Type: surrounding facilities
 
-@Author: Zhaoyang
+@author: Zhaoyang
 '''
 
 import csv

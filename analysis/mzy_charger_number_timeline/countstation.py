@@ -1,7 +1,7 @@
 '''
 Description: Plot timeline from dataset
 
-Author: Zhaoyang
+@author: Zhaoyang
 '''
 
 import csv
