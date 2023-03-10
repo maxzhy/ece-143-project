@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a01b121290201c2712a6cc1b501466fe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a01b121290201c2712a6cc1b501466fe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a01b121290201c2712a6cc1b501466fe = L.map(
+                "map_a01b121290201c2712a6cc1b501466fe",
+                {
+                    center: [38.0, -120.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_85c70062c83f4128934824ad6e1e7602 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+            var poly_line_4f9e787135d6da30f4d6c151f4738855 = L.polyline(
+                [[37.86996, -122.27055], [37.86972, -122.27238], [37.86966, -122.2728], [37.87134, -122.27298], [37.87152, -122.273], [37.86709, -122.3021], [37.86696, -122.30273], [37.89156, -122.30744], [37.89171, -122.30741], [37.95974, -122.33051], [37.99037, -122.31073], [37.99875, -122.28441], [38.05289, -122.227], [38.11887, -122.23019], [38.16086, -122.21049], [38.24755, -122.07345], [38.34062, -122.01242], [38.36635, -121.96184], [38.52742, -121.76016], [38.54509, -121.72783], [38.57496, -121.57228], [38.575, -121.57205], [38.57698, -121.52445], [38.56063, -121.4824], [38.56034, -121.48131], [38.55042, -121.42707], [38.56341, -121.34143], [38.64009, -121.19485], [38.66261, -120.93708], [38.73003, -120.81477], [38.73418, -120.67133], [38.76742, -120.55424], [38.7597, -120.50986], [38.77625, -120.40627], [38.764, -120.32646], [38.78871, -120.15476], [38.80853, -120.13572], [38.80247, -120.1126], [38.82596, -120.05358], [38.81295, -120.03055], [38.84663, -120.02904], [38.84685, -120.02881], [38.85079, -120.02264], [38.85083, -120.02251], [38.888, -120.00084], [38.91314, -120.00441], [38.91347, -120.00464], [38.91199, -120.00786], [38.9119, -120.008], [38.911628, -120.007814]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+            poly_line_4f9e787135d6da30f4d6c151f4738855.bindTooltip(
+                `<div>
+                     Route
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_74cdf38304dfd79749758ed2cd87cdbe = L.marker(
+                [38.131238, -122.223418],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_b829a657f4accf62416f6b813cc552ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efdce5f521a406084228b1c9e425697e = $(`<div id="html_efdce5f521a406084228b1c9e425697e" style="width: 100.0%; height: 100.0%;">904 Admiral Callaghan Lane Vallejo</div>`)[0];
+                popup_b829a657f4accf62416f6b813cc552ac.setContent(html_efdce5f521a406084228b1c9e425697e);
+            
+        
+
+        marker_74cdf38304dfd79749758ed2cd87cdbe.bindPopup(popup_b829a657f4accf62416f6b813cc552ac)
+        ;
+
+        
+    
+    
+            var marker_b5b21e396fc165beeb37e934e97e646f = L.marker(
+                [38.557442, -121.335459],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_d6f4efd49554aa8db9dc17796386a2b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a79fdc635c64f1d90620fa7d18545ff = $(`<div id="html_7a79fdc635c64f1d90620fa7d18545ff" style="width: 100.0%; height: 100.0%;">3591 Bradshaw Rd. Sacramento</div>`)[0];
+                popup_d6f4efd49554aa8db9dc17796386a2b8.setContent(html_7a79fdc635c64f1d90620fa7d18545ff);
+            
+        
+
+        marker_b5b21e396fc165beeb37e934e97e646f.bindPopup(popup_d6f4efd49554aa8db9dc17796386a2b8)
+        ;
+
+        
+    
+    
+            var marker_6e0460866dc484e2449a6d8bf7db9337 = L.marker(
+                [38.913263, -120.003719],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_6b31e7c5a2a9fd8e67adf1b05d9be770 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_192bf365dcb96b2aa8abd8f75a797de2 = $(`<div id="html_192bf365dcb96b2aa8abd8f75a797de2" style="width: 100.0%; height: 100.0%;">2012 Lake Tahoe Blvd South Lake Tahoe</div>`)[0];
+                popup_6b31e7c5a2a9fd8e67adf1b05d9be770.setContent(html_192bf365dcb96b2aa8abd8f75a797de2);
+            
+        
+
+        marker_6e0460866dc484e2449a6d8bf7db9337.bindPopup(popup_6b31e7c5a2a9fd8e67adf1b05d9be770)
+        ;
+
+        
+    
+    
+            var marker_5adf0536968c1dde18d3bfe1a71056eb = L.marker(
+                [38.542542, -121.725807],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_c76c79df9d727b76460032df387260e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6b36398d2ff096e788fc9bb10414732 = $(`<div id="html_f6b36398d2ff096e788fc9bb10414732" style="width: 100.0%; height: 100.0%;">2107-2151 Cowell Blvd Davis</div>`)[0];
+                popup_c76c79df9d727b76460032df387260e5.setContent(html_f6b36398d2ff096e788fc9bb10414732);
+            
+        
+
+        marker_5adf0536968c1dde18d3bfe1a71056eb.bindPopup(popup_c76c79df9d727b76460032df387260e5)
+        ;
+
+        
+    
+    
+            var marker_a5ea344636b6cf38e6aa37a4d765b11a = L.marker(
+                [38.294619, -122.0322109],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_e3fcbb0e3d3ac0d7124f487a414fa257 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a24f549ba5af3fa6029ce57423f385f = $(`<div id="html_8a24f549ba5af3fa6029ce57423f385f" style="width: 100.0%; height: 100.0%;">3650 Nelson Road Fairfield</div>`)[0];
+                popup_e3fcbb0e3d3ac0d7124f487a414fa257.setContent(html_8a24f549ba5af3fa6029ce57423f385f);
+            
+        
+
+        marker_a5ea344636b6cf38e6aa37a4d765b11a.bindPopup(popup_e3fcbb0e3d3ac0d7124f487a414fa257)
+        ;
+
+        
+    
+    
+            var marker_232c182b3b004f67f6409a3169ed1260 = L.marker(
+                [38.72688, -120.80303],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_86f62eb2310f304ccf74eaf326a0cd83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01686657cff587714a73c355379d98e1 = $(`<div id="html_01686657cff587714a73c355379d98e1" style="width: 100.0%; height: 100.0%;">3044 Sacramento St Placerville</div>`)[0];
+                popup_86f62eb2310f304ccf74eaf326a0cd83.setContent(html_01686657cff587714a73c355379d98e1);
+            
+        
+
+        marker_232c182b3b004f67f6409a3169ed1260.bindPopup(popup_86f62eb2310f304ccf74eaf326a0cd83)
+        ;
+
+        
+    
+    
+            var marker_7af2f500d4a610b46422fa2991a4eebf = L.marker(
+                [38.763574, -120.575757],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_3eda5c1be4fef5496bd6f3097a9b01ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b930909d22672f23855b181c42bc9038 = $(`<div id="html_b930909d22672f23855b181c42bc9038" style="width: 100.0%; height: 100.0%;">6529 Pony Express Trail Pollock Pines</div>`)[0];
+                popup_3eda5c1be4fef5496bd6f3097a9b01ff.setContent(html_b930909d22672f23855b181c42bc9038);
+            
+        
+
+        marker_7af2f500d4a610b46422fa2991a4eebf.bindPopup(popup_3eda5c1be4fef5496bd6f3097a9b01ff)
+        ;
+
+        
+    
+    
+            var marker_e881a2068a6a460e4a0ea1471c848864 = L.marker(
+                [37.93182, -122.32929],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_5c7d5db7edc802a8938fb712b41427fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f42f774dc202ec9acd21047b85a41614 = $(`<div id="html_f42f774dc202ec9acd21047b85a41614" style="width: 100.0%; height: 100.0%;">4500 Macdonald Ave Richmond</div>`)[0];
+                popup_5c7d5db7edc802a8938fb712b41427fb.setContent(html_f42f774dc202ec9acd21047b85a41614);
+            
+        
+
+        marker_e881a2068a6a460e4a0ea1471c848864.bindPopup(popup_5c7d5db7edc802a8938fb712b41427fb)
+        ;
+
+        
+    
+    
+            var marker_74f5048374c8052554d9833fc840a111 = L.marker(
+                [38.796189, -120.147],
+                {}
+            ).addTo(map_a01b121290201c2712a6cc1b501466fe);
+        
+    
+        var popup_3c64bc658199237616347bd0c996bf09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_986767846bbb97476865d620ba042815 = $(`<div id="html_986767846bbb97476865d620ba042815" style="width: 100.0%; height: 100.0%;">17481 US-50 Twin Bridges</div>`)[0];
+                popup_3c64bc658199237616347bd0c996bf09.setContent(html_986767846bbb97476865d620ba042815);
+            
+        
+
+        marker_74f5048374c8052554d9833fc840a111.bindPopup(popup_3c64bc658199237616347bd0c996bf09)
+        ;
+
+        
+    
+</script>
+</html>
