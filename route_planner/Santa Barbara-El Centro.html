@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8446d092150f6a358a7b5b28093e8df9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8446d092150f6a358a7b5b28093e8df9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8446d092150f6a358a7b5b28093e8df9 = L.map(
+                "map_8446d092150f6a358a7b5b28093e8df9",
+                {
+                    center: [38.0, -120.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7dac6f9313ddad00f3e09708c442ea08 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+            var poly_line_d8f17c98cf5e6a879fc979bd57549e44 = L.polyline(
+                [[34.421382, -119.702033], [34.41624, -119.70746], [34.4161, -119.70761], [34.41586, -119.55983], [34.37244, -119.45758], [34.28855, -119.33102], [34.26084, -119.26], [34.2637, -119.23403], [34.22806, -119.16916], [34.21424, -119.00966], [34.17568, -118.8549], [34.14636, -118.79531], [34.13859, -118.71976], [34.17334, -118.56223], [34.15439, -118.38319], [34.15439, -118.38286], [34.15606, -118.24328], [34.1415, -118.18233], [34.15169, -118.14543], [34.15168, -118.14481], [34.12009, -117.83725], [34.12011, -117.83717], [34.07152, -117.8087], [34.07122, -117.80858], [34.08727, -117.65127], [34.0675, -117.59547], [34.06169, -117.1813], [34.03486, -117.14479], [34.01227, -117.07343], [33.97441, -117.04506], [33.92697, -116.97917], [33.92353, -116.64124], [33.90352, -116.54117], [33.76741, -116.32355], [33.71976, -116.19547], [33.71955, -116.19526], [33.67209, -116.1462], [33.5934, -116.09684], [33.46073, -116.0913], [33.42681, -116.0608], [33.42606, -116.06006], [33.11398, -115.84531], [33.07892, -115.74757], [33.03878, -115.70828], [33.03734, -115.61838], [33.00005, -115.58981], [32.99918, -115.58915], [32.98267, -115.57612], [32.97863, -115.54179], [32.97863, -115.54163], [32.96402, -115.54819], [32.96375, -115.54835], [32.94172, -115.57018], [32.79648, -115.56998], [32.79616, -115.569975]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+            poly_line_d8f17c98cf5e6a879fc979bd57549e44.bindTooltip(
+                `<div>
+                     Route
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_261985b21a0f80b18f02429a74da482c = L.marker(
+                [34.074378, -117.298],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+            var icon_730db14c94096e8a813f0c64be482ee8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_261985b21a0f80b18f02429a74da482c.setIcon(icon_730db14c94096e8a813f0c64be482ee8);
+        
+    
+        var popup_1d40d4f9ebdd33c34e53640ae5054732 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_056e06392bc8a2510a9c3487ea08e651 = $(`<div id="html_056e06392bc8a2510a9c3487ea08e651" style="width: 100.0%; height: 100.0%;">735 Showcase Dr S San Bernardino</div>`)[0];
+                popup_1d40d4f9ebdd33c34e53640ae5054732.setContent(html_056e06392bc8a2510a9c3487ea08e651);
+            
+        
+
+        marker_261985b21a0f80b18f02429a74da482c.bindPopup(popup_1d40d4f9ebdd33c34e53640ae5054732)
+        ;
+
+        
+    
+    
+            var marker_14524111a1caac87bef704ab81e26392 = L.marker(
+                [33.924926, -116.899774],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_3a1039af34d958988848fcf6549043cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff11aa516e13fe083137d43ce882b073 = $(`<div id="html_ff11aa516e13fe083137d43ce882b073" style="width: 100.0%; height: 100.0%;">2140 W. Ramsey Street Banning</div>`)[0];
+                popup_3a1039af34d958988848fcf6549043cb.setContent(html_ff11aa516e13fe083137d43ce882b073);
+            
+        
+
+        marker_14524111a1caac87bef704ab81e26392.bindPopup(popup_3a1039af34d958988848fcf6549043cb)
+        ;
+
+        
+    
+    
+            var marker_1f1f9d7896dc0d6191a7f83d14bf1e67 = L.marker(
+                [33.741291, -116.215029],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_339ce5397cfcf9622b619817bf505b49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb3d5469f1465ca96bdfb08bd7de15e0 = $(`<div id="html_bb3d5469f1465ca96bdfb08bd7de15e0" style="width: 100.0%; height: 100.0%;">42100 Jackson Street Indio</div>`)[0];
+                popup_339ce5397cfcf9622b619817bf505b49.setContent(html_bb3d5469f1465ca96bdfb08bd7de15e0);
+            
+        
+
+        marker_1f1f9d7896dc0d6191a7f83d14bf1e67.bindPopup(popup_339ce5397cfcf9622b619817bf505b49)
+        ;
+
+        
+    
+    
+            var marker_8f5df9e17c11ae2af2ed0fbe625000b0 = L.marker(
+                [34.238115, -119.178084],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_9d5fda25ba562aa9c0fdb616ade6bdbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26eb8a6ef5f84f705d28f68a505f2a4c = $(`<div id="html_26eb8a6ef5f84f705d28f68a505f2a4c" style="width: 100.0%; height: 100.0%;">2751 Park View Ct Oxnard</div>`)[0];
+                popup_9d5fda25ba562aa9c0fdb616ade6bdbd.setContent(html_26eb8a6ef5f84f705d28f68a505f2a4c);
+            
+        
+
+        marker_8f5df9e17c11ae2af2ed0fbe625000b0.bindPopup(popup_9d5fda25ba562aa9c0fdb616ade6bdbd)
+        ;
+
+        
+    
+    
+            var marker_19afdef70fe30c10603938a2aa5a92ef = L.marker(
+                [33.902733, -116.544726],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_8e1b9caa9a2945c4eecf3bfa64d44bf7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c44290d7af2d7316cb2490ac5e7078e = $(`<div id="html_4c44290d7af2d7316cb2490ac5e7078e" style="width: 100.0%; height: 100.0%;">6600 N Indian Canyon Dr Palm Springs</div>`)[0];
+                popup_8e1b9caa9a2945c4eecf3bfa64d44bf7.setContent(html_4c44290d7af2d7316cb2490ac5e7078e);
+            
+        
+
+        marker_19afdef70fe30c10603938a2aa5a92ef.bindPopup(popup_8e1b9caa9a2945c4eecf3bfa64d44bf7)
+        ;
+
+        
+    
+    
+            var marker_6b6f5ec09d76de4da2e4452a07ef9dab = L.marker(
+                [32.79327, -115.56768],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_8cf1fe39d6971db83eb3fb7727efab0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bcb0fc52cd9640604b7d411a412eb5e = $(`<div id="html_6bcb0fc52cd9640604b7d411a412eb5e" style="width: 100.0%; height: 100.0%;">1414 W. MAIN ST El Centro</div>`)[0];
+                popup_8cf1fe39d6971db83eb3fb7727efab0b.setContent(html_6bcb0fc52cd9640604b7d411a412eb5e);
+            
+        
+
+        marker_6b6f5ec09d76de4da2e4452a07ef9dab.bindPopup(popup_8cf1fe39d6971db83eb3fb7727efab0b)
+        ;
+
+        
+    
+    
+            var marker_2f87f4c38ed17bcd46934804683bf583 = L.marker(
+                [33.794775, -116.386071],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_296a16001831a186089dce5edc15792f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd9c6adbd957dfa4b35819056433b836 = $(`<div id="html_cd9c6adbd957dfa4b35819056433b836" style="width: 100.0%; height: 100.0%;">34940 Monterey Ave Palm Desert</div>`)[0];
+                popup_296a16001831a186089dce5edc15792f.setContent(html_cd9c6adbd957dfa4b35819056433b836);
+            
+        
+
+        marker_2f87f4c38ed17bcd46934804683bf583.bindPopup(popup_296a16001831a186089dce5edc15792f)
+        ;
+
+        
+    
+    
+            var marker_f345c958da72989c30cae1a9f525249b = L.marker(
+                [34.142037, -118.148428],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_9d3a6ef5e377b11c12f80471e321efd0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_367f17e818647786829fcd88d34f3e12 = $(`<div id="html_367f17e818647786829fcd88d34f3e12" style="width: 100.0%; height: 100.0%;">202 S Raymond Ave Pasadena</div>`)[0];
+                popup_9d3a6ef5e377b11c12f80471e321efd0.setContent(html_367f17e818647786829fcd88d34f3e12);
+            
+        
+
+        marker_f345c958da72989c30cae1a9f525249b.bindPopup(popup_9d3a6ef5e377b11c12f80471e321efd0)
+        ;
+
+        
+    
+    
+            var marker_2b4670003024090b9196ca6b8c4b0b58 = L.marker(
+                [34.182093, -118.886496],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_d04c778082c356485a203d15a8ae1ca3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a12f68d30e7cc5e7a8978087bf85d21 = $(`<div id="html_0a12f68d30e7cc5e7a8978087bf85d21" style="width: 100.0%; height: 100.0%;">350 W Hillcrest Dr Thousand Oaks</div>`)[0];
+                popup_d04c778082c356485a203d15a8ae1ca3.setContent(html_0a12f68d30e7cc5e7a8978087bf85d21);
+            
+        
+
+        marker_2b4670003024090b9196ca6b8c4b0b58.bindPopup(popup_d04c778082c356485a203d15a8ae1ca3)
+        ;
+
+        
+    
+    
+            var marker_4faa78e46c48a9ea76d1a8682412f854 = L.marker(
+                [34.425572, -119.703028],
+                {}
+            ).addTo(map_8446d092150f6a358a7b5b28093e8df9);
+        
+    
+        var popup_480ce9973fe94fc982917375e053e160 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d182f5f62221a7ddf060a2489c5d024 = $(`<div id="html_9d182f5f62221a7ddf060a2489c5d024" style="width: 100.0%; height: 100.0%;">105 E Anapamu St Santa Barbara</div>`)[0];
+                popup_480ce9973fe94fc982917375e053e160.setContent(html_9d182f5f62221a7ddf060a2489c5d024);
+            
+        
+
+        marker_4faa78e46c48a9ea76d1a8682412f854.bindPopup(popup_480ce9973fe94fc982917375e053e160)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7b36bf45dd2197e652e6ef384cd08583 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7b36bf45dd2197e652e6ef384cd08583" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7b36bf45dd2197e652e6ef384cd08583 = L.map(
+                "map_7b36bf45dd2197e652e6ef384cd08583",
+                {
+                    center: [38.0, -120.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5a637f634b94524e485c0ee5b661c29c = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+            var poly_line_6250c0e85b46e477c17f7d57a80d611d = L.polyline(
+                [[32.71568, -117.16171], [32.71578, -117.16288], [32.71577, -117.1638], [32.72389, -117.16389], [32.72407, -117.16389], [32.7536, -117.19974], [32.82674, -117.23233], [32.90912, -117.22651], [33.00655, -117.26007], [33.16463, -117.34281], [33.32791, -117.49096], [33.38922, -117.58823], [33.43569, -117.6178], [33.4691, -117.67303], [33.5014, -117.65825], [33.53449, -117.67472], [33.59797, -117.67582], [33.61639, -117.70931], [33.7123, -117.78457], [33.76067, -117.86273], [33.83339, -117.93342], [33.90077, -118.05904], [34.00964, -118.15932], [34.03269, -118.21958], [34.05137, -118.2139], [34.05165, -118.21391], [34.08014, -118.22114], [34.11246, -118.26583], [34.14963, -118.27992], [34.18034, -118.31306], [34.21808, -118.35507], [34.23408, -118.41049], [34.33348, -118.50793], [34.35485, -118.55], [34.43151, -118.58841], [34.45526, -118.61586], [34.49153, -118.62045], [34.58475, -118.70921], [34.6218, -118.71758], [34.68836, -118.78665], [34.76882, -118.8012], [34.80917, -118.8836], [34.83945, -118.86302], [34.9036, -118.9231], [35.0062, -118.95147], [35.00704, -118.95167], [35.296, -119.25515], [35.49161, -119.52446], [35.57138, -119.6122], [35.8846, -119.86102], [36.00722, -119.98568], [36.08204, -120.10776], [36.18171, -120.19806], [36.30388, -120.27594], [36.49621, -120.44913], [36.62241, -120.60892], [36.88959, -120.80096], [37.11888, -121.02482], [37.19422, -121.07403], [37.37681, -121.12653], [37.41966, -121.15217], [37.42101, -121.15283], [37.52162, -121.24491], [37.52208, -121.24546], [37.60336, -121.34265], [37.75876, -121.34227], [37.78667, -121.30376], [37.87862, -121.27822], [37.94931, -121.30153], [37.96291, -121.33471], [38.11917, -121.39934], [38.18433, -121.40114], [38.27565, -121.45569], [38.45522, -121.4933], [38.50728, -121.52073], [38.60111, -121.50516], [38.65959, -121.53498], [38.67121, -121.54849], [38.67524, -121.74264], [38.70056, -121.7807], [38.87751, -121.9703], [39.20539, -122.17791], [39.31696, -122.19407], [39.48768, -122.19584], [39.52214, -122.21457], [39.96021, -122.20009], [40.17818, -122.22287], [40.29042, -122.27865], [40.44453, -122.28854], [40.51348, -122.34293], [40.60853, -122.36187], [40.60877, -122.36192], [40.62538, -122.29779], [40.62561, -122.29672], [40.69486, -122.10625], [40.74359, -122.06612], [40.79057, -121.94613], [40.86561, -121.90752], [40.8656, -121.90735], [40.87201, -121.86176], [40.85231, -121.76352], [40.85633, -121.74424], [40.87817, -121.73236], [40.87574, -121.67932], [40.87592, -121.67911], [40.93803, -121.6068], [40.93819, -121.60664], [41.00299, -121.63192], [41.01021, -121.64849], [41.01617, -121.6232], [41.06581, -121.6455], [41.13222, -121.63903], [41.16095, -121.66301], [41.20416, -121.7771], [41.24319, -121.80469], [41.26623, -121.85763], [41.25391, -122.14291], [41.25418, -122.14331], [41.28659, -122.29951], [41.28639, -122.29977], [41.37068, -122.37234], [41.41498, -122.38199], [41.42928, -122.42411], [41.45065, -122.4412], [41.6446, -122.53378], [41.68015, -122.62895], [41.70341, -122.64271], [41.72882, -122.63381], [41.72911, -122.63369], [41.73072, -122.63261], [41.73092, -122.63255], [41.73092, -122.63329], [41.73092, -122.63358], [41.73138, -122.63467], [41.73156, -122.63562], [41.73122, -122.6357]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+            poly_line_6250c0e85b46e477c17f7d57a80d611d.bindTooltip(
+                `<div>
+                     Route
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fcecc2dade88dba7b55b2c5a07b0a45 = L.marker(
+                [35.617189, -119.656363],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_feefac56057ee12339fecdf59fea13a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a3d39c88bc0e3d636d2a11bd199a197 = $(`<div id="html_9a3d39c88bc0e3d636d2a11bd199a197" style="width: 100.0%; height: 100.0%;">14684 Aloma St Lost Hills</div>`)[0];
+                popup_feefac56057ee12339fecdf59fea13a9.setContent(html_9a3d39c88bc0e3d636d2a11bd199a197);
+            
+        
+
+        marker_2fcecc2dade88dba7b55b2c5a07b0a45.bindPopup(popup_feefac56057ee12339fecdf59fea13a9)
+        ;
+
+        
+    
+    
+            var marker_1c7886f4be537c2553d93d1210f6d75b = L.marker(
+                [38.58442, -121.501873],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_4e8e1ffebf1109f0d2f1cafc6706f917 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5320352c2262019bcf86b4c6bc08bff8 = $(`<div id="html_5320352c2262019bcf86b4c6bc08bff8" style="width: 100.0%; height: 100.0%;">401 I St Sacramento</div>`)[0];
+                popup_4e8e1ffebf1109f0d2f1cafc6706f917.setContent(html_5320352c2262019bcf86b4c6bc08bff8);
+            
+        
+
+        marker_1c7886f4be537c2553d93d1210f6d75b.bindPopup(popup_4e8e1ffebf1109f0d2f1cafc6706f917)
+        ;
+
+        
+    
+    
+            var marker_913c5523dc7fa5544d44ec5b1dfdb136 = L.marker(
+                [35.400105, -119.397796],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_0e75c80db1bd91864406de9e3831002d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4780dd5417d487b8a771a93a3f77dbb = $(`<div id="html_e4780dd5417d487b8a771a93a3f77dbb" style="width: 100.0%; height: 100.0%;">20673 Tracy Ave. Buttonwillow</div>`)[0];
+                popup_0e75c80db1bd91864406de9e3831002d.setContent(html_e4780dd5417d487b8a771a93a3f77dbb);
+            
+        
+
+        marker_913c5523dc7fa5544d44ec5b1dfdb136.bindPopup(popup_0e75c80db1bd91864406de9e3831002d)
+        ;
+
+        
+    
+    
+            var marker_f89dd59fb167045bb037b230f82891a8 = L.marker(
+                [39.92646, -122.1984],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_da73ce41385ac8a534c0a51fe98c3e93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9511ce6c35833619d220d5be5673d6b3 = $(`<div id="html_9511ce6c35833619d220d5be5673d6b3" style="width: 100.0%; height: 100.0%;">950 Hwy 99 W Corning</div>`)[0];
+                popup_da73ce41385ac8a534c0a51fe98c3e93.setContent(html_9511ce6c35833619d220d5be5673d6b3);
+            
+        
+
+        marker_f89dd59fb167045bb037b230f82891a8.bindPopup(popup_da73ce41385ac8a534c0a51fe98c3e93)
+        ;
+
+        
+    
+    
+            var marker_22a0612316faba0a81eca77c69f5b6d6 = L.marker(
+                [34.98737, -118.946272],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_1b152f0852dcccc99be7793a98c1deab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f09c23258cce575347369623ccf4964e = $(`<div id="html_f09c23258cce575347369623ccf4964e" style="width: 100.0%; height: 100.0%;">5602 Dennis McCarthy Drive Lebec</div>`)[0];
+                popup_1b152f0852dcccc99be7793a98c1deab.setContent(html_f09c23258cce575347369623ccf4964e);
+            
+        
+
+        marker_22a0612316faba0a81eca77c69f5b6d6.bindPopup(popup_1b152f0852dcccc99be7793a98c1deab)
+        ;
+
+        
+    
+    
+            var marker_df19f81a620bc1d4ade06335787d06c4 = L.marker(
+                [38.88232, -121.97246],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_60d73dc64f9b8b268fc5b9d9ea2aeacc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_191707a4d214b45c9bec0c67139e1f06 = $(`<div id="html_191707a4d214b45c9bec0c67139e1f06" style="width: 100.0%; height: 100.0%;">3930 County Road 89 Dunnigan</div>`)[0];
+                popup_60d73dc64f9b8b268fc5b9d9ea2aeacc.setContent(html_191707a4d214b45c9bec0c67139e1f06);
+            
+        
+
+        marker_df19f81a620bc1d4ade06335787d06c4.bindPopup(popup_60d73dc64f9b8b268fc5b9d9ea2aeacc)
+        ;
+
+        
+    
+    
+            var marker_bc51c87b3d6c01ecfc4d640abd5cc549 = L.marker(
+                [39.52549, -122.21859],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_0839a620f8c5be032b767f08db868686 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3cdbdd6538407aeb1731b18c3253bcf1 = $(`<div id="html_3cdbdd6538407aeb1731b18c3253bcf1" style="width: 100.0%; height: 100.0%;">470 Airport Road Willows</div>`)[0];
+                popup_0839a620f8c5be032b767f08db868686.setContent(html_3cdbdd6538407aeb1731b18c3253bcf1);
+            
+        
+
+        marker_bc51c87b3d6c01ecfc4d640abd5cc549.bindPopup(popup_0839a620f8c5be032b767f08db868686)
+        ;
+
+        
+    
+    
+            var marker_84d6cf0336a4de0317505910f8b485ac = L.marker(
+                [37.4665, -121.174442],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_b3122e5782e581046d63bf680f394786 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68eb96245bfd970f1a99e9319c60b9cc = $(`<div id="html_68eb96245bfd970f1a99e9319c60b9cc" style="width: 100.0%; height: 100.0%;">2959 Speno Drive Patterson</div>`)[0];
+                popup_b3122e5782e581046d63bf680f394786.setContent(html_68eb96245bfd970f1a99e9319c60b9cc);
+            
+        
+
+        marker_84d6cf0336a4de0317505910f8b485ac.bindPopup(popup_b3122e5782e581046d63bf680f394786)
+        ;
+
+        
+    
+    
+            var marker_b49031bcd9d0587ffa7bb30622751de4 = L.marker(
+                [36.639154, -120.625877],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_73bf99c9f7194d0430c0fad4fd0ccbc0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e26439a2d38bcbe5bcc789a5c7e56e4 = $(`<div id="html_2e26439a2d38bcbe5bcc789a5c7e56e4" style="width: 100.0%; height: 100.0%;">46272 West Panoche Road Firebaugh</div>`)[0];
+                popup_73bf99c9f7194d0430c0fad4fd0ccbc0.setContent(html_2e26439a2d38bcbe5bcc789a5c7e56e4);
+            
+        
+
+        marker_b49031bcd9d0587ffa7bb30622751de4.bindPopup(popup_73bf99c9f7194d0430c0fad4fd0ccbc0)
+        ;
+
+        
+    
+    
+            var marker_2766c916369600d135365f9107110038 = L.marker(
+                [38.671345, -121.723886],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_a2b646930c8d0c05b26fa3a2a8c81511 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7ac618e183044dd48fe4ad6551bd38e = $(`<div id="html_f7ac618e183044dd48fe4ad6551bd38e" style="width: 100.0%; height: 100.0%;">2185 Bronze Star Drive Woodland</div>`)[0];
+                popup_a2b646930c8d0c05b26fa3a2a8c81511.setContent(html_f7ac618e183044dd48fe4ad6551bd38e);
+            
+        
+
+        marker_2766c916369600d135365f9107110038.bindPopup(popup_a2b646930c8d0c05b26fa3a2a8c81511)
+        ;
+
+        
+    
+    
+            var marker_1826a4be413439ece626c12b9e82618f = L.marker(
+                [40.45346, -122.28927],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_04acd50dda5b3e9f7eb7c09faa54148c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e68d2a30805f84cf75898f1d19f0b2f8 = $(`<div id="html_e68d2a30805f84cf75898f1d19f0b2f8" style="width: 100.0%; height: 100.0%;">2601 Balls Ferry Road Anderson</div>`)[0];
+                popup_04acd50dda5b3e9f7eb7c09faa54148c.setContent(html_e68d2a30805f84cf75898f1d19f0b2f8);
+            
+        
+
+        marker_1826a4be413439ece626c12b9e82618f.bindPopup(popup_04acd50dda5b3e9f7eb7c09faa54148c)
+        ;
+
+        
+    
+    
+            var marker_c87addf7038f6a46b8424f66b28e027c = L.marker(
+                [34.829254, -118.872293],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_3a6fa1bbd2479fc705c5916dea92a538 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_387cedcd6b4534ea3abc5301e52c028f = $(`<div id="html_387cedcd6b4534ea3abc5301e52c028f" style="width: 100.0%; height: 100.0%;">Interstate 5 Mile Marker 206 Lebec</div>`)[0];
+                popup_3a6fa1bbd2479fc705c5916dea92a538.setContent(html_387cedcd6b4534ea3abc5301e52c028f);
+            
+        
+
+        marker_c87addf7038f6a46b8424f66b28e027c.bindPopup(popup_3a6fa1bbd2479fc705c5916dea92a538)
+        ;
+
+        
+    
+    
+            var marker_b2db24be71d9b027cdfd0296ed263ccf = L.marker(
+                [33.706792, -117.785223],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_f4d9a729905a8bb3346c1d72f95ebbe3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22080489c773d28a36ab6ceac130be47 = $(`<div id="html_22080489c773d28a36ab6ceac130be47" style="width: 100.0%; height: 100.0%;">14346 Culver Drive Irvine</div>`)[0];
+                popup_f4d9a729905a8bb3346c1d72f95ebbe3.setContent(html_22080489c773d28a36ab6ceac130be47);
+            
+        
+
+        marker_b2db24be71d9b027cdfd0296ed263ccf.bindPopup(popup_f4d9a729905a8bb3346c1d72f95ebbe3)
+        ;
+
+        
+    
+    
+            var marker_4240ed60c69bf0385079ab3f579556d6 = L.marker(
+                [34.106894, -118.252569],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_03395ee9778f47c57d7b25dde4892e95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_430c479e2e57f7eee88f9acd1508fb89 = $(`<div id="html_430c479e2e57f7eee88f9acd1508fb89" style="width: 100.0%; height: 100.0%;">2333 Ripple St Los Angeles</div>`)[0];
+                popup_03395ee9778f47c57d7b25dde4892e95.setContent(html_430c479e2e57f7eee88f9acd1508fb89);
+            
+        
+
+        marker_4240ed60c69bf0385079ab3f579556d6.bindPopup(popup_03395ee9778f47c57d7b25dde4892e95)
+        ;
+
+        
+    
+    
+            var marker_3e22284ad05571045fb8c4e3e745a26c = L.marker(
+                [35.094359, -119.040751],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_5b08ca95457bb5edaa931afe754a4e6f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3ff4b9071f9147749bf1f0fc933b51a = $(`<div id="html_b3ff4b9071f9147749bf1f0fc933b51a" style="width: 100.0%; height: 100.0%;">10565 Copus Road Bakersfield</div>`)[0];
+                popup_5b08ca95457bb5edaa931afe754a4e6f.setContent(html_b3ff4b9071f9147749bf1f0fc933b51a);
+            
+        
+
+        marker_3e22284ad05571045fb8c4e3e745a26c.bindPopup(popup_5b08ca95457bb5edaa931afe754a4e6f)
+        ;
+
+        
+    
+    
+            var marker_691f84a0ba03493d7c2c47b25bda1594 = L.marker(
+                [37.584064307798, -121.323011555838],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_724c656a28d00eae0a482f2a2ddae78f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5587a004d55a5ba389644a877c6bf1a9 = $(`<div id="html_5587a004d55a5ba389644a877c6bf1a9" style="width: 100.0%; height: 100.0%;">Westley SRRA - Northbound, I-5 Westley</div>`)[0];
+                popup_724c656a28d00eae0a482f2a2ddae78f.setContent(html_5587a004d55a5ba389644a877c6bf1a9);
+            
+        
+
+        marker_691f84a0ba03493d7c2c47b25bda1594.bindPopup(popup_724c656a28d00eae0a482f2a2ddae78f)
+        ;
+
+        
+    
+    
+            var marker_c51eadf5c2b3f0021f45f2ec9e5a65c2 = L.marker(
+                [39.2401655852096, -122.180431214495],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_8d67201b3a69356afca5e10b7ccd2a0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_edb240919112ffe99f3668c87ddc1c70 = $(`<div id="html_edb240919112ffe99f3668c87ddc1c70" style="width: 100.0%; height: 100.0%;">Maxwell Rest Area, I-5 Williams</div>`)[0];
+                popup_8d67201b3a69356afca5e10b7ccd2a0e.setContent(html_edb240919112ffe99f3668c87ddc1c70);
+            
+        
+
+        marker_c51eadf5c2b3f0021f45f2ec9e5a65c2.bindPopup(popup_8d67201b3a69356afca5e10b7ccd2a0e)
+        ;
+
+        
+    
+    
+            var marker_3717d6daa92c41419fc29f3ff3da53c2 = L.marker(
+                [40.18162, -122.219647],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+            var icon_9044b84dbe690aacb34428756492d366 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3717d6daa92c41419fc29f3ff3da53c2.setIcon(icon_9044b84dbe690aacb34428756492d366);
+        
+    
+        var popup_52cb15ed39e3c35c7fa038267b5e4744 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc0d9471c419998aa06a01148fd4860f = $(`<div id="html_bc0d9471c419998aa06a01148fd4860f" style="width: 100.0%; height: 100.0%;">203 Antelope Blvd Red Bluff</div>`)[0];
+                popup_52cb15ed39e3c35c7fa038267b5e4744.setContent(html_bc0d9471c419998aa06a01148fd4860f);
+            
+        
+
+        marker_3717d6daa92c41419fc29f3ff3da53c2.bindPopup(popup_52cb15ed39e3c35c7fa038267b5e4744)
+        ;
+
+        
+    
+    
+            var marker_17406c20e464012bc653e89757827117 = L.marker(
+                [40.586094, -122.348823],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_f732721ad89b5e81ae8e84ec6595fd36 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2981082d1a802586a9a71ec0bc7308f = $(`<div id="html_f2981082d1a802586a9a71ec0bc7308f" style="width: 100.0%; height: 100.0%;">1280 Dana Dr Redding</div>`)[0];
+                popup_f732721ad89b5e81ae8e84ec6595fd36.setContent(html_f2981082d1a802586a9a71ec0bc7308f);
+            
+        
+
+        marker_17406c20e464012bc653e89757827117.bindPopup(popup_f732721ad89b5e81ae8e84ec6595fd36)
+        ;
+
+        
+    
+    
+            var marker_163310d52fd70cb9fc8701902edeb4dd = L.marker(
+                [41.30991, -122.316518],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_23f4fa1d7aa9a6ca0192fdb95c5d7f9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e6e11d53f3801cd4098ca1f1594833a = $(`<div id="html_8e6e11d53f3801cd4098ca1f1594833a" style="width: 100.0%; height: 100.0%;">134 Morgan Way Mount Shasta</div>`)[0];
+                popup_23f4fa1d7aa9a6ca0192fdb95c5d7f9b.setContent(html_8e6e11d53f3801cd4098ca1f1594833a);
+            
+        
+
+        marker_163310d52fd70cb9fc8701902edeb4dd.bindPopup(popup_23f4fa1d7aa9a6ca0192fdb95c5d7f9b)
+        ;
+
+        
+    
+    
+            var marker_dbbbfe1c4b68d98454649cb06420c914 = L.marker(
+                [41.702338, -122.645127],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_48f21ae459908a8cfdff51b4a9cb24fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca535cf18e9e514bc8b2b62e09356273 = $(`<div id="html_ca535cf18e9e514bc8b2b62e09356273" style="width: 100.0%; height: 100.0%;">1842 Fort Jones Rd Yreka</div>`)[0];
+                popup_48f21ae459908a8cfdff51b4a9cb24fa.setContent(html_ca535cf18e9e514bc8b2b62e09356273);
+            
+        
+
+        marker_dbbbfe1c4b68d98454649cb06420c914.bindPopup(popup_48f21ae459908a8cfdff51b4a9cb24fa)
+        ;
+
+        
+    
+    
+            var marker_2cdad46d857dfb3e132b7a4488bbf258 = L.marker(
+                [41.399114, -122.379589],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_f9e8e3a4bee598a89539537d2f820722 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88a80574d5bc2c7d6b8418e5d0e02ab0 = $(`<div id="html_88a80574d5bc2c7d6b8418e5d0e02ab0" style="width: 100.0%; height: 100.0%;">1844 Shastina Dr Weed</div>`)[0];
+                popup_f9e8e3a4bee598a89539537d2f820722.setContent(html_88a80574d5bc2c7d6b8418e5d0e02ab0);
+            
+        
+
+        marker_2cdad46d857dfb3e132b7a4488bbf258.bindPopup(popup_f9e8e3a4bee598a89539537d2f820722)
+        ;
+
+        
+    
+    
+            var marker_19bdbe25534e59d12ba6d3e0913344d1 = L.marker(
+                [38.051016, -121.373702],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+            var icon_8e26106b8dc5ba1219dd5434b1ed97a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_19bdbe25534e59d12ba6d3e0913344d1.setIcon(icon_8e26106b8dc5ba1219dd5434b1ed97a1);
+        
+    
+        var popup_5d5a7ac9c67af2d4a3d5d4a28c8ec8be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_161e934f29e65121eb978eed28ecbff1 = $(`<div id="html_161e934f29e65121eb978eed28ecbff1" style="width: 100.0%; height: 100.0%;">10424 Trinity Pkwy Stockton</div>`)[0];
+                popup_5d5a7ac9c67af2d4a3d5d4a28c8ec8be.setContent(html_161e934f29e65121eb978eed28ecbff1);
+            
+        
+
+        marker_19bdbe25534e59d12ba6d3e0913344d1.bindPopup(popup_5d5a7ac9c67af2d4a3d5d4a28c8ec8be)
+        ;
+
+        
+    
+    
+            var marker_6b1d4ad17015bb2ee17bef3053088395 = L.marker(
+                [37.104788, -121.015324],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_5f1ff93b72cd3bcfe75cbdaf61fe5621 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7b3d1bda8226b6ea723a1968b9d2f5b = $(`<div id="html_e7b3d1bda8226b6ea723a1968b9d2f5b" style="width: 100.0%; height: 100.0%;">12754 CA-33 Gustine</div>`)[0];
+                popup_5f1ff93b72cd3bcfe75cbdaf61fe5621.setContent(html_e7b3d1bda8226b6ea723a1968b9d2f5b);
+            
+        
+
+        marker_6b1d4ad17015bb2ee17bef3053088395.bindPopup(popup_5f1ff93b72cd3bcfe75cbdaf61fe5621)
+        ;
+
+        
+    
+    
+            var marker_ac943b7faec6040f724ee7f1d4a26557 = L.marker(
+                [32.921308, -117.215126],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_53dcd08e0378ce226c49d59236900d02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4182e06dac29733b146b6248f2961dd = $(`<div id="html_c4182e06dac29733b146b6248f2961dd" style="width: 100.0%; height: 100.0%;">4639 Carmel Mountain Road San Diego</div>`)[0];
+                popup_53dcd08e0378ce226c49d59236900d02.setContent(html_c4182e06dac29733b146b6248f2961dd);
+            
+        
+
+        marker_ac943b7faec6040f724ee7f1d4a26557.bindPopup(popup_53dcd08e0378ce226c49d59236900d02)
+        ;
+
+        
+    
+    
+            var marker_848d2660d33560eeb3d4d4d27ce8472f = L.marker(
+                [34.452256, -118.616132],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+            var icon_bb31f1748ac0a37f4d3f6a3e8ac586e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_848d2660d33560eeb3d4d4d27ce8472f.setIcon(icon_bb31f1748ac0a37f4d3f6a3e8ac586e3);
+        
+    
+        var popup_04a65ca51ceeecb6bfe67c993715a4d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47345301cbc9d793fa4e48f2ca5b2714 = $(`<div id="html_47345301cbc9d793fa4e48f2ca5b2714" style="width: 100.0%; height: 100.0%;">29461 The Old Road Castaic</div>`)[0];
+                popup_04a65ca51ceeecb6bfe67c993715a4d1.setContent(html_47345301cbc9d793fa4e48f2ca5b2714);
+            
+        
+
+        marker_848d2660d33560eeb3d4d4d27ce8472f.bindPopup(popup_04a65ca51ceeecb6bfe67c993715a4d1)
+        ;
+
+        
+    
+    
+            var marker_6e514276f3a1b161e16e726d22b9b715 = L.marker(
+                [35.497954, -119.554083],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_797573af9e2c2789ba6886b999dbaa7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c439112949ec5f2d30e3da9c50ce505d = $(`<div id="html_c439112949ec5f2d30e3da9c50ce505d" style="width: 100.0%; height: 100.0%;">24551 West Lerdo Highway Buttonwillow</div>`)[0];
+                popup_797573af9e2c2789ba6886b999dbaa7f.setContent(html_c439112949ec5f2d30e3da9c50ce505d);
+            
+        
+
+        marker_6e514276f3a1b161e16e726d22b9b715.bindPopup(popup_797573af9e2c2789ba6886b999dbaa7f)
+        ;
+
+        
+    
+    
+            var marker_b171cd474ccd0426688a23b824a7b586 = L.marker(
+                [37.82615, -121.285962],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_964a25d3ed549f2d8b0a7f36ed728c8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7fdf235f1d476a557ac84a317696b4a3 = $(`<div id="html_7fdf235f1d476a557ac84a317696b4a3" style="width: 100.0%; height: 100.0%;">192 Lathrop Road Lathrop</div>`)[0];
+                popup_964a25d3ed549f2d8b0a7f36ed728c8e.setContent(html_7fdf235f1d476a557ac84a317696b4a3);
+            
+        
+
+        marker_b171cd474ccd0426688a23b824a7b586.bindPopup(popup_964a25d3ed549f2d8b0a7f36ed728c8e)
+        ;
+
+        
+    
+    
+            var marker_2fad7d55b9317f01c6d5aa1725d99f6e = L.marker(
+                [39.7500793, -122.2026507],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_db77ab822ee8707f0c14dc8ac2c2b093 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a80b24e3463dea2ae87b1c16c0d4ddea = $(`<div id="html_a80b24e3463dea2ae87b1c16c0d4ddea" style="width: 100.0%; height: 100.0%;">900 Newville Rd Orland</div>`)[0];
+                popup_db77ab822ee8707f0c14dc8ac2c2b093.setContent(html_a80b24e3463dea2ae87b1c16c0d4ddea);
+            
+        
+
+        marker_2fad7d55b9317f01c6d5aa1725d99f6e.bindPopup(popup_db77ab822ee8707f0c14dc8ac2c2b093)
+        ;
+
+        
+    
+    
+            var marker_78007bf97a6e421e74644394c7f722dc = L.marker(
+                [35.9864299606126, -119.961033735046],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+        var popup_cd1956c7fa7cab075cc475714b800805 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1532f7d4750144e9913f7004531b2f41 = $(`<div id="html_1532f7d4750144e9913f7004531b2f41" style="width: 100.0%; height: 100.0%;">33415 Powers Dr Kettleman City</div>`)[0];
+                popup_cd1956c7fa7cab075cc475714b800805.setContent(html_1532f7d4750144e9913f7004531b2f41);
+            
+        
+
+        marker_78007bf97a6e421e74644394c7f722dc.bindPopup(popup_cd1956c7fa7cab075cc475714b800805)
+        ;
+
+        
+    
+    
+            var marker_db3a8fc9dec0b99d24a75195d97a51b1 = L.marker(
+                [36.253519, -120.240461],
+                {}
+            ).addTo(map_7b36bf45dd2197e652e6ef384cd08583);
+        
+    
+            var icon_1618aba256493f4fb532e02f5edef194 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_db3a8fc9dec0b99d24a75195d97a51b1.setIcon(icon_1618aba256493f4fb532e02f5edef194);
+        
+    
+        var popup_ef5dd6211fc627ccfd42cbf3ddba1ea2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4e81656c9c0fc7b6210df567dcae7f1 = $(`<div id="html_a4e81656c9c0fc7b6210df567dcae7f1" style="width: 100.0%; height: 100.0%;">24553 W Dorris Ave Coalinga</div>`)[0];
+                popup_ef5dd6211fc627ccfd42cbf3ddba1ea2.setContent(html_a4e81656c9c0fc7b6210df567dcae7f1);
+            
+        
+
+        marker_db3a8fc9dec0b99d24a75195d97a51b1.bindPopup(popup_ef5dd6211fc627ccfd42cbf3ddba1ea2)
+        ;
+
+        
+    
+</script>
+</html>
