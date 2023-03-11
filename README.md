@@ -47,13 +47,14 @@ ece-143-project
 ## How to run
 
 ### install requirements
-
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 ### Visualizations
 
 1. Go to *visualization* folder
-2. Run [ECE 143 Project visuals.ipynb](https://github.com/maxzhy/ece-143-project/blob/main/visualization/ECE 143 Project visuals.ipynb)
+2. Run [ECE 143 Project visuals.ipynb](https://github.com/maxzhy/ece-143-project/blob/main/visualization/ECE)
 
 ### Route planner
 
