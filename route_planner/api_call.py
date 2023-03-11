@@ -24,14 +24,14 @@ class CallAPI:
         end = self.end
         
         # call MapRequest API to get general info
-        url1 = f'http://www.mapquestapi.com/directions/v2/route?key=24Kb50gRGAB4ndDacHzA6CHHJIHsiDkT&from={start}&to={end}'
+        url1 = f'http://www.mapquestapi.com/directions/v2/route?key=<YOUR_API_KEY>&from={start}&to={end}'
         response1 = requests.get(url1).json()
         sid = response1['route']['sessionId']
         json_distance = response1['route']['distance'] # distance between start to end in miles
         json_time = response1['route']['time'] # general time of the trip, usually < realtime
 
         # with the sessionId obtained from above API, get the detailed route in polyline format
-        url2 = f'http://www.mapquestapi.com/directions/v2/routeshape?key=24Kb50gRGAB4ndDacHzA6CHHJIHsiDkT&sessionId={sid}&generalize=1000'
+        url2 = f'http://www.mapquestapi.com/directions/v2/routeshape?key=<YOUR_API_KEY>&sessionId={sid}&generalize=1000'
         response2 = requests.get(url2).json()
         lat_lng = response2['route']['shape']['shapePoints']
 
@@ -66,7 +66,7 @@ class CallAPI:
             right = coos_add[i+1]
             left = ('{}' +','+ '{}').format(left, right)
         
-        url3 = f'https://developer.nrel.gov/api/alt-fuel-stations/v1/nearby-route.json?api_key=MIjVh1EiBsSCU31yFaRJWDSXc6qYeepqfOgShgWZ&return_type=ids&fuel_type=ELEC&distance=1&route=LINESTRING({left})'
+        url3 = f'https://developer.nrel.gov/api/alt-fuel-stations/v1/nearby-route.json?api_key=<YOUR_API_KEY>&return_type=ids&fuel_type=ELEC&distance=1&route=LINESTRING({left})'
         response3 = requests.get(url3).json()
 
         ids = response3['fuel_station_ids'] # station ids
@@ -86,31 +86,7 @@ class CallAPI:
                     station.append(row[1]) # city
                     stations.append(station)
         f.close()
-        '''
-        # json 3
-        with open('out3.json', 'r') as j3file:
-            station3 = json.load(j3file)
-        j3file.close()
-        ids = station3['fuel_station_ids'] # station ids
 
-        # id: int to str
-        ids_str = [str(x) for x in ids]
-
-        # compare the obtained ids with cleaned dataset and remove those not in dataset
-        stations = [] # stations = [ids, lat, lng, street address]
-        with open('./dataset/new_data_cleaned2.csv', 'r') as f:
-            csv_reader = csv.reader(f)
-            for row in csv_reader:
-                if row[11] in ids_str:
-                    station = []
-                    station.append(row[11])
-                    station.append(row[9])
-                    station.append(row[10])
-                    station.append(row[0]) # street address
-                    station.append(row[1]) # city
-                    stations.append(station)
-        f.close()
-        '''
         return stations
 
 

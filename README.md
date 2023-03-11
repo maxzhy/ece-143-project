@@ -44,9 +44,9 @@ ece-143-project
     └── presentation slides.pdf
 ```
 
-## How to run
+## How to Run
 
-### install requirements
+### Install requirements
 ```
 pip install -r requirements.txt
 ```
@@ -59,6 +59,7 @@ pip install -r requirements.txt
 ### Route planner
 
 1. Go to *route_planner* folder
-2. Run [main.py](https://github.com/maxzhy/ece-143-project/blob/main/route_planner/main.py)
-3. Enter the start city and end city in command line
-4. Find the result it *output maps* folder
+2. Open [api_call.py](https://github.com/maxzhy/ece-143-project/blob/main/route_planner/api_call.py) and add your [MapRequest API key](https://developer.mapquest.com/) to `url1` and `url2` and add your [NREL API key](https://developer.nrel.gov/docs/) to `url3`
+3. Run [main.py](https://github.com/maxzhy/ece-143-project/blob/main/route_planner/main.py)
+4. Enter the start city and end city in command line
+5. Find the result it *output maps* folder
