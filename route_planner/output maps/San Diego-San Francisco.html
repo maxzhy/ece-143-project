@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5ee8c27390b335b5519bb452ce610759 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5ee8c27390b335b5519bb452ce610759" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5ee8c27390b335b5519bb452ce610759 = L.map(
+                "map_5ee8c27390b335b5519bb452ce610759",
+                {
+                    center: [38.0, -120.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ad3c1f5c5e8488ec545125ebc4ae79e6 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+            var poly_line_283ae45d677e7087532d423088d33dcc = L.polyline(
+                [[32.71568, -117.16171], [32.71578, -117.16288], [32.71577, -117.1638], [32.72389, -117.16389], [32.72407, -117.16389], [32.7536, -117.19974], [32.82674, -117.23233], [32.89893, -117.22488], [32.89901, -117.22485], [32.91611, -117.23136], [32.91619, -117.23146], [32.91828, -117.23353], [32.91839, -117.2336], [32.92199, -117.22859], [32.92214, -117.2284], [32.93348, -117.23636], [32.93395, -117.2365], [32.93442, -117.23673], [32.93479, -117.23696], [32.98249, -117.23048], [32.98271, -117.23053], [32.98318, -117.22697], [32.98322, -117.22675], [33.00032, -117.22594], [33.00058, -117.22605], [32.99618, -117.22963], [32.99611, -117.22973], [32.99583, -117.25491], [32.99578, -117.25511], [32.99581, -117.25539], [32.99582, -117.25553], [33.19723, -117.36789], [33.32791, -117.49096], [33.38922, -117.58823], [33.43569, -117.6178], [33.4691, -117.67303], [33.5014, -117.65825], [33.53686, -117.67458], [33.53719, -117.67454], [33.55576, -117.67834], [33.58528, -117.7274], [33.63631, -117.85393], [33.6854, -117.89668], [33.6858, -117.89706], [33.69045, -117.91876], [33.69046, -117.91935], [33.71339, -117.91963], [33.71389, -117.91964], [33.7145, -117.92184], [33.71468, -117.92211], [33.71611, -117.96275], [33.7161, -117.96318], [33.71606, -117.96449], [33.71606, -117.96493], [33.77461, -118.04218], [33.77456, -118.08128], [33.80272, -118.11752], [33.82652, -118.2072], [33.82593, -118.2453], [33.85924, -118.28967], [33.86739, -118.33551], [33.89931, -118.37031], [33.96556, -118.37044], [34.08862, -118.47525], [34.29499, -118.47098], [34.29594, -118.47198], [34.35754, -118.55282], [34.42442, -118.58379], [34.44892, -118.61263], [34.49969, -118.62604], [34.58475, -118.70921], [34.6218, -118.71758], [34.68836, -118.78665], [34.76882, -118.8012], [34.80917, -118.8836], [34.83945, -118.86302], [34.9036, -118.9231], [35.0062, -118.95147], [35.00693, -118.95163], [35.296, -119.25515], [35.49161, -119.52446], [35.57138, -119.6122], [35.8846, -119.86102], [36.00722, -119.98568], [36.08204, -120.10776], [36.18171, -120.19806], [36.30388, -120.27594], [36.49621, -120.44913], [36.62241, -120.60892], [36.88959, -120.80096], [37.11888, -121.02482], [37.19422, -121.07403], [37.37681, -121.12653], [37.41966, -121.15217], [37.42101, -121.15283], [37.52162, -121.24491], [37.52208, -121.24546], [37.59307, -121.33615], [37.59332, -121.33647], [37.74202, -121.56155], [37.70247, -121.74385], [37.70367, -122.00238], [37.6907, -122.09411], [37.7156, -122.13166], [37.77234, -122.15666], [37.82689, -122.28628], [37.82688, -122.28635], [37.81864, -122.35229], [37.77083, -122.40599], [37.77056, -122.40589], [37.76965, -122.41598], [37.76968, -122.41623], [37.77049, -122.41979], [37.77054, -122.41983], [37.77248, -122.41889], [37.7731, -122.41865], [37.77695, -122.41962], [37.777119, -122.419665]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+            poly_line_283ae45d677e7087532d423088d33dcc.bindTooltip(
+                `<div>
+                     Route
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9baf87983572a0936e9655d848268d8d = L.marker(
+                [35.617189, -119.656363],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_a10889a3f1e8234890af02b20c7c1a3f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4505cc2809d753a291fcdde54625ead = $(`<div id="html_c4505cc2809d753a291fcdde54625ead" style="width: 100.0%; height: 100.0%;">14684 Aloma St Lost Hills</div>`)[0];
+                popup_a10889a3f1e8234890af02b20c7c1a3f.setContent(html_c4505cc2809d753a291fcdde54625ead);
+            
+        
+
+        marker_9baf87983572a0936e9655d848268d8d.bindPopup(popup_a10889a3f1e8234890af02b20c7c1a3f)
+        ;
+
+        
+    
+    
+            var marker_6b8fe5bf7169cd33ffcea61a7dafa48c = L.marker(
+                [35.400105, -119.397796],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_ddb270c78cadeb3bd7611932da0ca004 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13f6e287be13d28c4393ae1d4609e76f = $(`<div id="html_13f6e287be13d28c4393ae1d4609e76f" style="width: 100.0%; height: 100.0%;">20673 Tracy Ave. Buttonwillow</div>`)[0];
+                popup_ddb270c78cadeb3bd7611932da0ca004.setContent(html_13f6e287be13d28c4393ae1d4609e76f);
+            
+        
+
+        marker_6b8fe5bf7169cd33ffcea61a7dafa48c.bindPopup(popup_ddb270c78cadeb3bd7611932da0ca004)
+        ;
+
+        
+    
+    
+            var marker_b0c6bb6b743ae047f496cea164b79f61 = L.marker(
+                [34.98737, -118.946272],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_8f6367ab5f92600e780075647e034b23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b3bb2453ef8051c9e51297356a7bf48 = $(`<div id="html_7b3bb2453ef8051c9e51297356a7bf48" style="width: 100.0%; height: 100.0%;">5602 Dennis McCarthy Drive Lebec</div>`)[0];
+                popup_8f6367ab5f92600e780075647e034b23.setContent(html_7b3bb2453ef8051c9e51297356a7bf48);
+            
+        
+
+        marker_b0c6bb6b743ae047f496cea164b79f61.bindPopup(popup_8f6367ab5f92600e780075647e034b23)
+        ;
+
+        
+    
+    
+            var marker_c58df9806c7baa9e5fc09a2bc50e0706 = L.marker(
+                [33.498538, -117.66309],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_d803047c44a3a3c0b4adcfcb03c93ad8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_339ef1a4c3338ab74a53be6828734a9c = $(`<div id="html_339ef1a4c3338ab74a53be6828734a9c" style="width: 100.0%; height: 100.0%;">31971 Camino Capistrano San Juan Capistrano</div>`)[0];
+                popup_d803047c44a3a3c0b4adcfcb03c93ad8.setContent(html_339ef1a4c3338ab74a53be6828734a9c);
+            
+        
+
+        marker_c58df9806c7baa9e5fc09a2bc50e0706.bindPopup(popup_d803047c44a3a3c0b4adcfcb03c93ad8)
+        ;
+
+        
+    
+    
+            var marker_fb14cc71d04bde3e228a6cb3ef877de8 = L.marker(
+                [37.70068, -121.8844],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_a0b7cce94e1b953e40b3e7dee3625d02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb5b67f0747b7cf6dad47504c19c4e17 = $(`<div id="html_bb5b67f0747b7cf6dad47504c19c4e17" style="width: 100.0%; height: 100.0%;">4575 Rosewood Drive Pleasanton</div>`)[0];
+                popup_a0b7cce94e1b953e40b3e7dee3625d02.setContent(html_bb5b67f0747b7cf6dad47504c19c4e17);
+            
+        
+
+        marker_fb14cc71d04bde3e228a6cb3ef877de8.bindPopup(popup_a0b7cce94e1b953e40b3e7dee3625d02)
+        ;
+
+        
+    
+    
+            var marker_a8679815b9f246cbd8c0949dcb1b7b02 = L.marker(
+                [37.69479, -122.08156],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_4b1ce807020815696add49177c3ed334 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95b92621fa62baa87b0d783256fb3c36 = $(`<div id="html_95b92621fa62baa87b0d783256fb3c36" style="width: 100.0%; height: 100.0%;">3067 Castro Valley Blvd. Castro Valley</div>`)[0];
+                popup_4b1ce807020815696add49177c3ed334.setContent(html_95b92621fa62baa87b0d783256fb3c36);
+            
+        
+
+        marker_a8679815b9f246cbd8c0949dcb1b7b02.bindPopup(popup_4b1ce807020815696add49177c3ed334)
+        ;
+
+        
+    
+    
+            var marker_bb15a11d10f094803a2abdeea7b63aae = L.marker(
+                [37.83268, -122.27974],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_66da4f04a2bcca687ebe5e83d8b5aa9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d619d0d0e6a68d67c0af785362cac88 = $(`<div id="html_9d619d0d0e6a68d67c0af785362cac88" style="width: 100.0%; height: 100.0%;">4120 San Pablo Avenue Emeryville</div>`)[0];
+                popup_66da4f04a2bcca687ebe5e83d8b5aa9e.setContent(html_9d619d0d0e6a68d67c0af785362cac88);
+            
+        
+
+        marker_bb15a11d10f094803a2abdeea7b63aae.bindPopup(popup_66da4f04a2bcca687ebe5e83d8b5aa9e)
+        ;
+
+        
+    
+    
+            var marker_d5fe5e9689c1a13530fb09153250e667 = L.marker(
+                [37.71589, -121.70398],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_9d634b417896d5813db9e23960ade81e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f2244456897be0d49503eaee6138428 = $(`<div id="html_4f2244456897be0d49503eaee6138428" style="width: 100.0%; height: 100.0%;">7576 Southfront Rd Livermore</div>`)[0];
+                popup_9d634b417896d5813db9e23960ade81e.setContent(html_4f2244456897be0d49503eaee6138428);
+            
+        
+
+        marker_d5fe5e9689c1a13530fb09153250e667.bindPopup(popup_9d634b417896d5813db9e23960ade81e)
+        ;
+
+        
+    
+    
+            var marker_59101dc0de1e8e2f99bb43799465540d = L.marker(
+                [37.4665, -121.174442],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_43894c7e9a2003ba2d1fec50350e4007 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_89f410e14a3163af1201a5db4d5811a7 = $(`<div id="html_89f410e14a3163af1201a5db4d5811a7" style="width: 100.0%; height: 100.0%;">2959 Speno Drive Patterson</div>`)[0];
+                popup_43894c7e9a2003ba2d1fec50350e4007.setContent(html_89f410e14a3163af1201a5db4d5811a7);
+            
+        
+
+        marker_59101dc0de1e8e2f99bb43799465540d.bindPopup(popup_43894c7e9a2003ba2d1fec50350e4007)
+        ;
+
+        
+    
+    
+            var marker_d0afaafa7019361143fe624a76e4b8a2 = L.marker(
+                [36.639154, -120.625877],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_4abb9f1f6b1ca39de7cba1ec7cf599c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e42ae15c277c1c6070db478836e54293 = $(`<div id="html_e42ae15c277c1c6070db478836e54293" style="width: 100.0%; height: 100.0%;">46272 West Panoche Road Firebaugh</div>`)[0];
+                popup_4abb9f1f6b1ca39de7cba1ec7cf599c1.setContent(html_e42ae15c277c1c6070db478836e54293);
+            
+        
+
+        marker_d0afaafa7019361143fe624a76e4b8a2.bindPopup(popup_4abb9f1f6b1ca39de7cba1ec7cf599c1)
+        ;
+
+        
+    
+    
+            var marker_454cb1db0b82338249c830a85ba9d655 = L.marker(
+                [34.829254, -118.872293],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_10b2ce6881800d2efe7e4d8887287e7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60eba8ce25ecab413d57e8f7b1d3f21e = $(`<div id="html_60eba8ce25ecab413d57e8f7b1d3f21e" style="width: 100.0%; height: 100.0%;">Interstate 5 Mile Marker 206 Lebec</div>`)[0];
+                popup_10b2ce6881800d2efe7e4d8887287e7d.setContent(html_60eba8ce25ecab413d57e8f7b1d3f21e);
+            
+        
+
+        marker_454cb1db0b82338249c830a85ba9d655.bindPopup(popup_10b2ce6881800d2efe7e4d8887287e7d)
+        ;
+
+        
+    
+    
+            var marker_ed83d2cd2e4066396a143c3ad424ed3a = L.marker(
+                [35.094359, -119.040751],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_b01bb9aaa02057f9efd85c71b0d24c4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08648f79c4ac3dc82f28a4c37f21f151 = $(`<div id="html_08648f79c4ac3dc82f28a4c37f21f151" style="width: 100.0%; height: 100.0%;">10565 Copus Road Bakersfield</div>`)[0];
+                popup_b01bb9aaa02057f9efd85c71b0d24c4b.setContent(html_08648f79c4ac3dc82f28a4c37f21f151);
+            
+        
+
+        marker_ed83d2cd2e4066396a143c3ad424ed3a.bindPopup(popup_b01bb9aaa02057f9efd85c71b0d24c4b)
+        ;
+
+        
+    
+    
+            var marker_551558edd3cf38fbac5985d993fa641d = L.marker(
+                [37.7786972, -122.4126145],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_7b3845e1afc538b68d8c5512a3bb1cc1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1ba4b6d531bd96d5e094bbea7faaed3 = $(`<div id="html_a1ba4b6d531bd96d5e094bbea7faaed3" style="width: 100.0%; height: 100.0%;">1160 Mission St San Francisco</div>`)[0];
+                popup_7b3845e1afc538b68d8c5512a3bb1cc1.setContent(html_a1ba4b6d531bd96d5e094bbea7faaed3);
+            
+        
+
+        marker_551558edd3cf38fbac5985d993fa641d.bindPopup(popup_7b3845e1afc538b68d8c5512a3bb1cc1)
+        ;
+
+        
+    
+    
+            var marker_b1af273cc8c9aeab2a86d0cb9df36cff = L.marker(
+                [37.584064307798, -121.323011555838],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_766d6a3e7f335df2109236fde4c36753 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7ac5027826b553ca7549c365fcd0e36 = $(`<div id="html_e7ac5027826b553ca7549c365fcd0e36" style="width: 100.0%; height: 100.0%;">Westley SRRA - Northbound, I-5 Westley</div>`)[0];
+                popup_766d6a3e7f335df2109236fde4c36753.setContent(html_e7ac5027826b553ca7549c365fcd0e36);
+            
+        
+
+        marker_b1af273cc8c9aeab2a86d0cb9df36cff.bindPopup(popup_766d6a3e7f335df2109236fde4c36753)
+        ;
+
+        
+    
+    
+            var marker_7b6a0e532f1689bdcc890c7f5853e12d = L.marker(
+                [37.104788, -121.015324],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_c6baca290b1fcf5e2bb254893ed749f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9c468d5476fbcc3493608eed59c6d91 = $(`<div id="html_f9c468d5476fbcc3493608eed59c6d91" style="width: 100.0%; height: 100.0%;">12754 CA-33 Gustine</div>`)[0];
+                popup_c6baca290b1fcf5e2bb254893ed749f7.setContent(html_f9c468d5476fbcc3493608eed59c6d91);
+            
+        
+
+        marker_7b6a0e532f1689bdcc890c7f5853e12d.bindPopup(popup_c6baca290b1fcf5e2bb254893ed749f7)
+        ;
+
+        
+    
+    
+            var marker_eb2e8c5f679ceb20e668464ffb745033 = L.marker(
+                [32.921308, -117.215126],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_a5e1c19f57a3dc323cf1bc18a647ee44 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95210cfeba5f9f8fdf55bcd5fe7d6d42 = $(`<div id="html_95210cfeba5f9f8fdf55bcd5fe7d6d42" style="width: 100.0%; height: 100.0%;">4639 Carmel Mountain Road San Diego</div>`)[0];
+                popup_a5e1c19f57a3dc323cf1bc18a647ee44.setContent(html_95210cfeba5f9f8fdf55bcd5fe7d6d42);
+            
+        
+
+        marker_eb2e8c5f679ceb20e668464ffb745033.bindPopup(popup_a5e1c19f57a3dc323cf1bc18a647ee44)
+        ;
+
+        
+    
+    
+            var marker_cbe3e99502b7c219085f17fa95ccd956 = L.marker(
+                [34.452256, -118.616132],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_3615eff3f82224c4b5408ea3e9465ec7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7230608bcdd28f4f3f5ba5443029182 = $(`<div id="html_c7230608bcdd28f4f3f5ba5443029182" style="width: 100.0%; height: 100.0%;">29461 The Old Road Castaic</div>`)[0];
+                popup_3615eff3f82224c4b5408ea3e9465ec7.setContent(html_c7230608bcdd28f4f3f5ba5443029182);
+            
+        
+
+        marker_cbe3e99502b7c219085f17fa95ccd956.bindPopup(popup_3615eff3f82224c4b5408ea3e9465ec7)
+        ;
+
+        
+    
+    
+            var marker_778ae49d0ee8fcc07c7e174daeabd964 = L.marker(
+                [35.497954, -119.554083],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_101bce67d952c6f41a02a95bcded1629 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_480c322fce4522150769755f97731446 = $(`<div id="html_480c322fce4522150769755f97731446" style="width: 100.0%; height: 100.0%;">24551 West Lerdo Highway Buttonwillow</div>`)[0];
+                popup_101bce67d952c6f41a02a95bcded1629.setContent(html_480c322fce4522150769755f97731446);
+            
+        
+
+        marker_778ae49d0ee8fcc07c7e174daeabd964.bindPopup(popup_101bce67d952c6f41a02a95bcded1629)
+        ;
+
+        
+    
+    
+            var marker_136db7eb0a783a19bec243b0e7db2dc9 = L.marker(
+                [35.9864299606126, -119.961033735046],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_a3612097724a394527cbcdaf582c332b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d1fd655ea6c6cafbd4d2c44bd9e0b10 = $(`<div id="html_9d1fd655ea6c6cafbd4d2c44bd9e0b10" style="width: 100.0%; height: 100.0%;">33415 Powers Dr Kettleman City</div>`)[0];
+                popup_a3612097724a394527cbcdaf582c332b.setContent(html_9d1fd655ea6c6cafbd4d2c44bd9e0b10);
+            
+        
+
+        marker_136db7eb0a783a19bec243b0e7db2dc9.bindPopup(popup_a3612097724a394527cbcdaf582c332b)
+        ;
+
+        
+    
+    
+            var marker_2e507bd55a3a04fcac7327ef1e82288e = L.marker(
+                [33.827568, -118.250824],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_25a0b70308894cba6c50b63453dd7705 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea7de43d23a8a7c4bc92ba3a9cd3ce91 = $(`<div id="html_ea7de43d23a8a7c4bc92ba3a9cd3ce91" style="width: 100.0%; height: 100.0%;">22020 Recreation Rd Carson</div>`)[0];
+                popup_25a0b70308894cba6c50b63453dd7705.setContent(html_ea7de43d23a8a7c4bc92ba3a9cd3ce91);
+            
+        
+
+        marker_2e507bd55a3a04fcac7327ef1e82288e.bindPopup(popup_25a0b70308894cba6c50b63453dd7705)
+        ;
+
+        
+    
+    
+            var marker_5ca78fcb3afc63e225cf1e334847fe0d = L.marker(
+                [36.253519, -120.240461],
+                {}
+            ).addTo(map_5ee8c27390b335b5519bb452ce610759);
+        
+    
+        var popup_9861edba8c6dd0ccd30b5b3e22f76199 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_701a48252bd0bc4946e88ddd2decc89f = $(`<div id="html_701a48252bd0bc4946e88ddd2decc89f" style="width: 100.0%; height: 100.0%;">24553 W Dorris Ave Coalinga</div>`)[0];
+                popup_9861edba8c6dd0ccd30b5b3e22f76199.setContent(html_701a48252bd0bc4946e88ddd2decc89f);
+            
+        
+
+        marker_5ca78fcb3afc63e225cf1e334847fe0d.bindPopup(popup_9861edba8c6dd0ccd30b5b3e22f76199)
+        ;
+
+        
+    
+</script>
+</html>
